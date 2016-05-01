@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.internal.utils.emotion;
+package com.android.internal.utils.cmremix;
 
 import android.content.ComponentName;
 import android.content.Context;

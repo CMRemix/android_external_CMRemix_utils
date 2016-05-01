@@ -10,7 +10,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 	org.cyanogenmod.platform.sdk \
     org.cyanogenmod.platform.internal
 
-LOCAL_MODULE := org.emotroid.utils
+LOCAL_MODULE := org.cmremix.utils
 
 include $(BUILD_JAVA_LIBRARY)
 
