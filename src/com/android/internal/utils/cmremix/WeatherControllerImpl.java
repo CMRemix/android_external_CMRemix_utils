@@ -30,6 +30,8 @@ import android.util.Log;
 import cyanogenmod.providers.WeatherContract;
 import cyanogenmod.weather.util.WeatherUtils;
 
+import com.android.internal.utils.cmremix.WeatherControllerUtils;
+
 import java.util.ArrayList;
 
 import static cyanogenmod.providers.WeatherContract.WeatherColumns.CURRENT_CITY;
@@ -106,7 +108,7 @@ public class WeatherControllerImpl implements WeatherController {
         try {
             Resources resources =
                     mContext.createPackageContext(LOCK_CLOCK_PACKAGE_NAME, 0).getResources();
-            return resources.getDrawable(resources.getIdentifier(iconName + conditionCode,
+            return resources.getDrawable(resources.getIdentifier(iconName + WeatherControllerUtils.addOffsetToConditionCodeFromWeatherContract(conditionCode),
                     "drawable", LOCK_CLOCK_PACKAGE_NAME));
         } catch (PackageManager.NameNotFoundException e) {
             return null;
